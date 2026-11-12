@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria da Pipoca 🍿</title>
+    <style>
+        body {
+            background-color: #121214;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Menu do Topo */
+        nav {
+            background-color: #E50914;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .menu-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Cabeçalho Principal */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        header h1 {
+            color: #E50914;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cccccc;
+            font-size: 1.2em;
+        }
+
+        /* Grade de Cartões */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #1c1c20;
+            border-radius: 12px;
+            padding: 20px;
+            border-top: 4px solid #FFD700;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* NOVO: Estilo das imagens dentro dos cartões */
+        .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain; /* Mostra a imagem inteira sem cortes */
+    background-color: #121214; /* Fundo escuro nas sobras laterais */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+        .tag {
+            display: inline-block;
+            background-color: #E50914;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #FFD700;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #dddddd;
+            line-height: 1.5;
+        }
+
+        .btn-ler {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #FFD700;
+            color: #121214;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .btn-ler:hover {
+            background-color: #ffffff;
+        }
+        footer {
+    background-color: #1c1c20;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #E50914;
+    font-size: 0.95em;
+}
+footer strong {
+    color: #FFD700;
+}
+footer .links-rodape {
+    margin: 12px 0;
+}
+footer .links-rodape a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 0.9em;
+}
+footer .links-rodape a:hover {
+    color: #FFD700;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🍿 Teoria da Pipoca</a>
+        <div class="menu-links">
+            <a href="index.html">Início</a>
+            <a href="#">Filmes</a>
+            <a href="#">Séries</a>
+            <a href="#">Games</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Bem-vindos ao Teoria da Pipoca! 🍿🎬</h1>
+        <p>O seu QG para teorias malucas, reviews sinceros e tudo sobre cultura pop.</p>
+    </header>
+
+    <div class="container">
+        <!-- Cartão 1 com imagem -->
+        <div class="card">
+            <div>
+                <!-- Troque "doomsday.jpg" pelo nome exato da foto que você subiu -->
+                <img src="doomsday.jpg" alt="Pôster Vingadores Doomsday">
+                <span class="tag">Teoria Marvel</span>
+                <h3>O que esperar de Vingadores: Doomsday?</h3>
+                <p>Analisamos todas as pistas e teorias sobre o retorno do Robert Downey Jr. como Doutor Destino.</p>
+            </div>
+            <a href="teoria-doomsday.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+     <!-- Cartão 2 atualizado para Teoria -->
+<div class="card">
+    <div>
+        <img src="deadpool.jpg" alt="Pôster Deadpool e Wolverine">
+        <span class="tag">Teoria Marvel</span>
+        <h3>O que o final de Deadpool & Wolverine muda na Marvel?</h3>
+        <p>Analisamos as pistas do multiverso e o que vem por aí para os mutantes.</p>
+    </div>
+    <a href="review-deadpool.html" class="btn-ler">Ler Teoria</a>
+</div>
+
+        <!-- Cartão 3: 007 -->
+        <div class="card">
+            <div>
+                <img src="bond.jpg" alt="Novo James Bond 007">
+                <span class="tag">Especial Cinema</span>
+                <h3>Quem será o novo James Bond?</h3>
+                <p>Com as audições rolando, analisamos as teorias e o que esperar da nova fase de 007.</p>
+            </div>
+            <a href="teoria-007.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 4: Velozes e Furiosos -->
+        <div class="card">
+            <div>
+                <img src="velozes.jpg" alt="Velozes e Furiosos">
+                <span class="tag">Teoria Cinema</span>
+                <h3>O que esperar do último Velozes e Furiosos?</h3>
+                <p>Analisamos os rumores sobre o desfecho da saga de Toretto e a possível volta às corridas de rua.</p>
+            </div>
+            <a href="teoria-velozes.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 5: Homem-Aranha -->
+        <div class="card">
+            <div>
+                <img src="aranha.jpg" alt="Novo filme do Homem-Aranha">
+                <span class="tag">Teoria Marvel</span>
+                <h3>O novo Homem-Aranha e o futuro da Marvel</h3>
+                <p>Analisamos as pistas e os ganchos deixados pelo novo filme do Teioso que estreou este ano.</p>
+            </div>
+            <a href="teoria-aranha.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 6: Jogos Vorazes -->
+        <div class="card">
+            <div>
+                <img src="jogosvorazes.jpg" alt="Jogos Vorazes Amanhecer na Colheita">
+                <span class="tag">Teoria Cinema</span>
+                <h3>Amanhecer na Colheita: Os segredos de Jogos Vorazes</h3>
+                <p>Voltamos 24 anos no tempo para analisar a história do jovem Haymitch e o Segundo Massacre Quaternário.</p>
+            </div>
+            <a href="teoria-jogosvorazes.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 7: Zootopia -->
+        <div class="card">
+            <div>
+                <img src="zootopia.jpg" alt="Zootopia 2">
+                <span class="tag">Teoria Animação</span>
+                <h3>Os segredos de Zootopia 2 e o futuro da cidade</h3>
+                <p>Analisamos o mistério envolvendo os répteis, os easter eggs escondidos e os ganchos para a continuação.</p>
+            </div>
+            <a href="teoria-zootopia.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 8: Shrek 5 -->
+        <div class="card">
+            <div>
+                <img src="shrek.jpg" alt="Shrek 5">
+                <span class="tag">Teoria Animação</span>
+                <h3>Shrek 5 vem aí: Teorias sobre a volta ao pântano</h3>
+                <p>Com estreia marcada para o ano que vem, analisamos os ganchos de Gato de Botas 2 e o futuro de Tão Tão Distante.</p>
+            </div>
+            <a href="teoria-shrek.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 9: Enrolados -->
+        <div class="card">
+            <div>
+                <img src="enrolados.jpg" alt="Live-action de Enrolados">
+                <span class="tag">Especial Cinema</span>
+                <h3>Live-action de Enrolados: O que esperar do filme?</h3>
+                <p>Analisamos os rumores sobre o elenco, os desafios visuais e o que deve mudar na nova versão da Disney.</p>
+            </div>
+            <a href="teoria-enrolados.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        <!-- Cartão 10: Frozen 3 -->
+        <div class="card">
+            <div>
+                <img src="frozen.jpg" alt="Frozen 3">
+                <span class="tag">Teoria Animação</span>
+                <h3>Frozen 3: Os mistérios que o novo filme vai responder</h3>
+                <p>Analisamos as pistas sobre os poderes da Elsa, o futuro de Arendelle e a conexão com Frozen 4.</p>
+            </div>
+            <a href="teoria-frozen.html" class="btn-ler">Ler Teoria</a>
+        </div>
+
+        </div> <!-- Fecha os cartões -->
+
+    <!-- COLE O RODAPÉ AQUI! -->
+    <footer>
+        <p><strong>🍿 Teoria da Pipoca</strong> — O seu portal de teorias, reviews e cultura pop.</p>
+        <div class="links-rodape">
+            <a href="#" onclick="filtrar('todos'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Voltar ao Topo ↑</a>
+            <a href="#" onclick="filtrar('filmes'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Filmes</a>
+            <a href="#" onclick="filtrar('series'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Séries</a>
+            <a href="#" onclick="filtrar('games'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Games</a>
+        </div>
+        <p>© 2026 Equipe Teoria da Pipoca • Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- O SCRIPT DO FILTRO FICA AQUI EMBAIXO -->
+    <script>
+        function filtrar(categoria) {
+            const cartoes = document.querySelectorAll('.card');
+            
+            cartoes.forEach(cartao => {
+                if (categoria === 'todos' || cartao.getAttribute('data-categoria') === categoria) {
+                    cartao.style.display = 'flex';
+                } else {
+                    cartao.style.display = 'none';
+                }
+            });
+        }
+    </script>
+        
+</body>
+</html>
