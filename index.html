@@ -3,220 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teoria da Pipoca - Seu Portal de Cultura Pop</title>
-    <!-- Fonte moderna e estilizada do Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <title>Teoria da Pipoca 🍿</title>
     <style>
-        /* Reset básico e variáveis de cores da Pipoca */
-        :root {
-            --vermelho-pipoca: #E50914;
-            --amarelo-pipoca: #FFD700;
-            --branco: #FFFFFF;
-            --fundo-escuro: #121214;
-            --fundo-card: #1E1E22;
-            --texto-suave: #C4C4CC;
-        }
-
-        * {
+        body {
+            background-color: #121214;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            background-color: var(--fundo-escuro);
-            color: var(--branco);
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
+        /* Menu do Topo */
+        nav {
+            background-color: #E50914;
+            padding: 15px 30px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
-        /* Cabecalho em Destaque */
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .menu-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu-links a:hover {
+            color: #FFD700;
+        }
+
+        /* Cabeçalho Principal */
         header {
-            width: 100%;
-            background: linear-gradient(180deg, rgba(229, 9, 20, 0.2) 0%, rgba(18, 18, 20, 0) 100%);
-            padding: 50px 20px 30px;
             text-align: center;
-            border-bottom: 3px solid var(--vermelho-pipoca);
+            padding: 60px 20px 40px;
         }
 
-        .badge-pipoca {
-            background-color: var(--amarelo-pipoca);
-            color: #000;
-            font-size: 14px;
-            font-weight: 800;
-            padding: 6px 16px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
-        }
-
-        h1 {
-            color: var(--vermelho-pipoca);
-            font-size: 2.8rem;
-            font-weight: 800;
-            text-shadow: 0 2px 10px rgba(229, 9, 20, 0.4);
+        header h1 {
+            color: #E50914;
+            font-size: 3em;
             margin-bottom: 10px;
         }
 
-        h1 span {
-            color: var(--amarelo-pipoca);
+        header p {
+            color: #cccccc;
+            font-size: 1.2em;
         }
 
-        p.subtitulo {
-            color: var(--texto-suave);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Container de Conteudo Principal */
-        main {
+        /* Grade de Cartões */
+        .container {
             max-width: 1000px;
-            width: 90%;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .titulo-secao {
-            font-size: 1.8rem;
-            color: var(--branco);
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .titulo-secao::after {
-            content: '';
-            display: block;
-            width: 60%;
-            height: 4px;
-            background: var(--amarelo-pipoca);
-            margin: 8px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Grid de Cards */
-        .cards-grid {
+            margin: 0 auto;
+            padding: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            margin-top: 20px;
         }
 
         .card {
-            background-color: var(--fundo-card);
-            border: 2px solid #29292E;
-            border-radius: 16px;
-            padding: 30px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            background-color: #1c1c20;
+            border-radius: 12px;
+            padding: 25px;
+            border-top: 4px solid #FFD700;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        /* Efeito ao passar o mouse */
         .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--vermelho-pipoca);
-            box-shadow: 0 10px 25px rgba(229, 9, 20, 0.3);
+            transform: translateY(-5px);
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--vermelho-pipoca), var(--amarelo-pipoca));
-        }
-
-        .card-emoji {
-            font-size: 3rem;
+        .tag {
+            background-color: #E50914;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            font-weight: bold;
+            align-self: flex-start;
             margin-bottom: 15px;
-            display: block;
         }
 
         .card h3 {
-            color: var(--amarelo-pipoca);
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            color: #FFD700;
+            margin-top: 0;
         }
 
         .card p {
-            color: var(--texto-suave);
-            font-size: 0.95rem;
+            color: #dddddd;
             line-height: 1.5;
         }
 
-        /* Rodapé */
-        footer {
-            margin-top: auto;
-            width: 100%;
+        .btn-ler {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #FFD700;
+            color: #121214;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
             text-align: center;
-            padding: 20px;
-            border-top: 1px solid #29292E;
-            color: var(--texto-suave);
-            font-size: 0.9rem;
+            transition: background-color 0.3s;
         }
 
-        footer span {
-            color: var(--vermelho-pipoca);
-            font-weight: bold;
+        .btn-ler:hover {
+            background-color: #ffffff;
         }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho do Site -->
+    <nav>
+        <a href="index.html" class="logo">🍿 Teoria da Pipoca</a>
+        <div class="menu-links">
+            <a href="index.html">Início</a>
+            <a href="#">Filmes</a>
+            <a href="#">Séries</a>
+            <a href="#">Games</a>
+        </div>
+    </nav>
+
     <header>
-        <span class="badge-pipoca">🍿 Portal Geek</span>
-        <h1>Bem-vindos ao <span>Teoria da Pipoca!</span> 🎬</h1>
-        <p class="subtitulo">O seu ponto de encontro definitivo sobre filmes, séries, animes e games. Pegue sua pipoca e venha debater com a gente!</p>
+        <h1>Bem-vindos ao Teoria da Pipoca! 🍿🎬</h1>
+        <p>O seu QG para teorias malucas, reviews sinceros e tudo sobre cultura pop.</p>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main>
-        <h2 class="titulo-secao">O que você vai encontrar aqui</h2>
-
-        <div class="cards-grid">
-            <!-- Card 1 -->
-            <div class="card">
-                <span class="card-emoji">🍿</span>
-                <h3>Reviews de Filmes</h3>
-                <p>As melhores análises dos lançamentos do cinema, sem rodeios e com a nossa opinião sincera.</p>
+    <div class="container">
+        <!-- Cartão 1: Já conectado com a página da teoria! -->
+        <div class="card">
+            <div>
+                <span class="tag">Teoria Marvel</span>
+                <h3>O que esperar de Vingadores: Doomsday?</h3>
+                <p>Analisamos todas as pistas e teorias sobre o retorno do Robert Downey Jr. como Doutor Destino.</p>
             </div>
-
-            <!-- Card 2 -->
-            <div class="card">
-                <span class="card-emoji">👽</span>
-                <h3>Teorias de Séries</h3>
-                <p>Análises detalhadas, easter eggs escondidos e as teorias mais loucas sobre os próximos episódios.</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <span class="card-emoji">🕹️</span>
-                <h3>Dicas de Games</h3>
-                <p>Guias de gameplay, novidades dos seus jogos favoritos e recomendações do que jogar no fim de semana.</p>
-            </div>
+            <a href="teoria-doomsday.html" class="btn-ler">Ler Teoria</a>
         </div>
-    </main>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>Criado por <span>Amigos do Teoria da Pipoca</span> &copy; 2026. Todos os direitos reservados.</p>
-    </footer>
+        <!-- Cartão 2: Exemplo pronto para vocês editarem depois -->
+        <div class="card">
+            <div>
+                <span class="tag">Review Filme</span>
+                <h3>Crítica: Deadpool & Wolverine</h3>
+                <p>Valeu a pena a espera? Confira nossa nota e todos os easter eggs que você deixou passar.</p>
+            </div>
+            <a href="#" class="btn-ler">Em breve</a>
+        </div>
+    </div>
 
 </body>
 </html>
-
