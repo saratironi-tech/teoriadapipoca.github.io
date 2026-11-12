@@ -75,7 +75,7 @@
         .card {
             background-color: #1c1c20;
             border-radius: 12px;
-            padding: 25px;
+            padding: 20px;
             border-top: 4px solid #FFD700;
             transition: transform 0.3s;
             display: flex;
@@ -87,15 +87,24 @@
             transform: translateY(-5px);
         }
 
+        /* NOVO: Estilo das imagens dentro dos cartões */
+        .card img {
+            width: 100%;
+            height: 220px; /* Altura padrão para alinhar os cartões */
+            object-fit: cover; /* Ajusta a foto sem esticar ou deformar */
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
         .tag {
+            display: inline-block;
             background-color: #E50914;
             color: #ffffff;
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 0.8em;
             font-weight: bold;
-            align-self: flex-start;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .card h3 {
@@ -144,9 +153,11 @@
     </header>
 
     <div class="container">
-        <!-- Cartão 1: Já conectado com a página da teoria! -->
+        <!-- Cartão 1 com imagem -->
         <div class="card">
             <div>
+                <!-- Troque "doomsday.jpg" pelo nome exato da foto que você subiu -->
+                <img src="doomsday.jpg" alt="Pôster Vingadores Doomsday">
                 <span class="tag">Teoria Marvel</span>
                 <h3>O que esperar de Vingadores: Doomsday?</h3>
                 <p>Analisamos todas as pistas e teorias sobre o retorno do Robert Downey Jr. como Doutor Destino.</p>
@@ -154,9 +165,11 @@
             <a href="teoria-doomsday.html" class="btn-ler">Ler Teoria</a>
         </div>
 
-        <!-- Cartão 2: Exemplo pronto para vocês editarem depois -->
+        <!-- Cartão 2 com imagem -->
         <div class="card">
             <div>
+                <!-- Troque "deadpool.jpg" pelo nome exato da foto que você subiu -->
+                <img src="deadpool.jpg" alt="Pôster Deadpool e Wolverine">
                 <span class="tag">Review Filme</span>
                 <h3>Crítica: Deadpool & Wolverine</h3>
                 <p>Valeu a pena a espera? Confira nossa nota e todos os easter eggs que você deixou passar.</p>
