@@ -134,6 +134,30 @@
         .btn-ler:hover {
             background-color: #ffffff;
         }
+        footer {
+    background-color: #1c1c20;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 3px solid #E50914;
+    font-size: 0.95em;
+}
+footer strong {
+    color: #FFD700;
+}
+footer .links-rodape {
+    margin: 12px 0;
+}
+footer .links-rodape a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 0.9em;
+}
+footer .links-rodape a:hover {
+    color: #FFD700;
+}
     </style>
 </head>
 <body>
@@ -264,6 +288,35 @@
             </div>
             <a href="teoria-frozen.html" class="btn-ler">Ler Teoria</a>
         </div>
+
+        </div> <!-- Fecha os cartões -->
+
+    <!-- COLE O RODAPÉ AQUI! -->
+    <footer>
+        <p><strong>🍿 Teoria da Pipoca</strong> — O seu portal de teorias, reviews e cultura pop.</p>
+        <div class="links-rodape">
+            <a href="#" onclick="filtrar('todos'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Voltar ao Topo ↑</a>
+            <a href="#" onclick="filtrar('filmes'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Filmes</a>
+            <a href="#" onclick="filtrar('series'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Séries</a>
+            <a href="#" onclick="filtrar('games'); window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Games</a>
+        </div>
+        <p>© 2026 Equipe Teoria da Pipoca • Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- O SCRIPT DO FILTRO FICA AQUI EMBAIXO -->
+    <script>
+        function filtrar(categoria) {
+            const cartoes = document.querySelectorAll('.card');
+            
+            cartoes.forEach(cartao => {
+                if (categoria === 'todos' || cartao.getAttribute('data-categoria') === categoria) {
+                    cartao.style.display = 'flex';
+                } else {
+                    cartao.style.display = 'none';
+                }
+            });
+        }
+    </script>
         
 </body>
 </html>
